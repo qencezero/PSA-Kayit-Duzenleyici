@@ -1,0 +1,32 @@
+{
+  "name": "PSA-Kayit-Duzenleyici",
+  "version": "1.0.0",
+  "description": "PSA Makinalarının Üretim Kayıtlarını İşler ve Çıktı Üretir",
+  "main": "main.js",
+  "author": "Erman İlçin",
+  "scripts": {
+    "start": "electron .",
+    "buildHelp": "electron-builder --help",
+    "build": "electron-builder --win",
+    "license": "mit"
+  },
+  "build": {
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  },
+  "devDependencies": {
+    "electron": "^7.1.7",
+    "electron-builder": "^21.2.0"
+  }
+}
