@@ -8,17 +8,21 @@
 npm install
 ```
 
+
 #### Çalıştırmak için
 
 ```
 npm start
 ```
 
+
 #### Paketlemek için
 
 ```
 npm run-script build
 ```
+
+
 
 ![PSA Kayıt Düzenleyici](https://raw.githubusercontent.com/qencezero/PSA-Kayit-Duzenleyici/master/image.png)
 
