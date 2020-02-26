@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <title> PSA Kayıt Düzenleyici </title>
+</head>
+<body>
+
+  <style media="screen">
+  * {
+    cursor: default !important;
+  }
+  ul, li {
+    font-size: 12px;
+  }
+  label {
+    font-size: 14px !important;
+  }
+  </style>
+
+  <div class="container">
+    <div class="p-3">
+
+      <h2 class="font-weight-light"> PSA Kayıt Düzenleyici </h2>
+
+      <hr>
+
+      <div class="input-group input-group-sm my-4">
+        <input id="selectedDir" type="text" class="form-control" value="" disabled>
+        <div class="input-group-append">
+          <button id="browse" onclick="browse()" class="btn btn-secondary" type="button">Gözat</button>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+
+        <div class="col-md-5 text-center">
+
+          <div class="form-group row">
+            <label for="readingUnicode" class="col-sm-6 col-form-label align-middle"> Okuma Unicode </label>
+            <div class="col-sm-6">
+              <select id="readingUnicode" class="custom-select custom-select-sm">
+                <option value="ascii">ascii</option>
+                <option value="base64">base64</option>
+                <option value="binary" selected>binary</option>
+                <option value="hex">hex</option>
+                <option value="ucs2">ucs2</option>
+                <option value="utf8">utf8</option>
+                <option value="latin1">latin1</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="writingUnicode" class="col-sm-6 col-form-label align-middle"> Yazma Unicode </label>
+            <div class="col-sm-6">
+              <select id="writingUnicode" class="custom-select custom-select-sm">
+                <option value="ascii">ascii</option>
+                <option value="base64">base64</option>
+                <option value="binary">binary</option>
+                <option value="hex">hex</option>
+                <option value="ucs2">ucs2</option>
+                <option value="utf8" selected>utf8</option>
+                <option value="latin1">latin1</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="decimalSeparator" class="col-sm-6 col-form-label align-middle"> Ondalık Ayracı </label>
+            <div class="col-sm-6">
+              <select id="decimalSeparator" class="custom-select custom-select-sm">
+                <option value="comma" selected>virgül</option>
+                <option value="point">nokta</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-5">
+
+          <div class="custom-control custom-checkbox">
+            <input id="fixCSV" type="checkbox" class="custom-control-input" checked disabled>
+            <label class="custom-control-label" for="fixCSV" style="padding-top: 1px;"> <b>.CSV</b> hatalarını düzelt </label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+            <input id="fixTabularData" type="checkbox" class="custom-control-input" checked>
+            <label class="custom-control-label" for="fixTabularData" style="padding-top: 1px;"> Tabular yapısını düzelt </label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+            <input id="removeA_A" type="checkbox" class="custom-control-input" checked>
+            <label class="custom-control-label" for="removeA_A" style="padding-top: 1px;"> <b>A_A</b> karakterlerini kaldır </label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+            <input id="addDateCreated" type="checkbox" class="custom-control-input" checked disabled>
+            <label class="custom-control-label" for="addDateCreated" style="padding-top: 1px;"> Oluşturma tarihi ekle </label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+            <input id="addHeadings" type="checkbox" class="custom-control-input" checked>
+            <label class="custom-control-label" for="addHeadings" style="padding-top: 1px;"> Başlıkları ekle </label>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <button id="btn_reset" onclick="reset()" class="btn btn-sm btn-block btn-danger" type="button">Reset</button>
+        </div>
+
+        <div class="col">
+          <button id="btn_start" onclick="btn_start()" class="btn btn-sm btn-block btn-success" type="button">Başlat</button>
+        </div>
+      </div>
+
+      <small class="">Olaylar</small>
+      <div class="border rounded p-2 mb-4">
+        <ul id="list" class="m-0 pl-3"></ul>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="fixed-bottom bg-light text-center p-1 border-top">
+    <div class="container">
+      <p style="font-size: 12px; padding: 8px; margin: 0px;"> Erman İlçin <b>|</b> https://github.com/erman999/PSA-Kayit-Duzenleyici</p>
+    </div>
+  </footer>
+
+  <script src="./renderer.js"></script>
+
+</body>
+</html>
