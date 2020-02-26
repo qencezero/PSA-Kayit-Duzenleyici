@@ -1,6 +1,6 @@
 # PSA Kayıt Düzenleyici
 
-*PSA makinalarına ait üretim kayıtlarını gösterilen hedef klasörden okur ve hatalarını düzelterek masaüstüne oluşturduğu çıktı dosyasının içine atar.*
+*PSA makinalarına ait üretim kayıtlarını gösterilen hedef klasörden okur, hatalarını düzeltir ve masaüstüne hedef klasör ile aynı isimde bir çıktı üretir.*
 
 #### Kurulum
 
