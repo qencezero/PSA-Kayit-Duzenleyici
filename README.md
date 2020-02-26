@@ -23,3 +23,8 @@ npm run-script build
 ```
 
 
+#### Görünüm
+![PSA Kayıt Düzenleyici](https://raw.githubusercontent.com/qencezero/PSA-Kayit-Duzenleyici/master/image.png)
+
+
+
