@@ -1,6 +1,6 @@
 {
   "name": "PSA-Kayit-Duzenleyici",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "PSA Makinalarının Üretim Kayıtlarını Düzeltir ve Çıktı Üretir",
   "main": "main.js",
   "author": "Erman İlçin",
