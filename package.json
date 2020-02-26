@@ -1,7 +1,7 @@
 {
   "name": "PSA-Kayit-Duzenleyici",
   "version": "1.0.0",
-  "description": "PSA Makinalarının Üretim Kayıtlarını İşler ve Çıktı Üretir",
+  "description": "PSA Makinalarının Üretim Kayıtlarını Düzeltir ve Çıktı Üretir",
   "main": "main.js",
   "author": "Erman İlçin",
   "scripts": {
